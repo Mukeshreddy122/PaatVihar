@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Logo from "../../component/header/Pv.png"
 import { Link } from "react-router-dom";
+import SchoolList from "../../component/schoolList/SchoolList"
 const Home = () => {
   const [schools, setSchools] = useState([]);
   useEffect(() => {
@@ -30,7 +31,7 @@ const Home = () => {
          
             {
                 schools.map(school=>(
-                    <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${school.id}`}>
+                    <Link style={{textDecoration:"none",color:"white"}} to={`/school/${school._id}`}>
                         <div className="posterImage">
                             <img src={Logo}/>
                         </div>
@@ -57,6 +58,7 @@ const Home = () => {
                 )
             }
         </Carousel>
+        <SchoolList/>
       </div>
     </>
   );
