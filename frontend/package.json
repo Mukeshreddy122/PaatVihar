@@ -7,6 +7,7 @@
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.17",
     "@react-google-maps/api": "^2.17.1",
