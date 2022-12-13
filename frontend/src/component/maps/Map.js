@@ -23,20 +23,13 @@
 import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
-const containerStyle = {
-  width: "100%",
-  height: "100%",
-};
 
-function Map({setCoordinates,coordinates}) {
+function Map() {
   return (
-    
-      <LoadScript googleMapsApiKey="AIzaSyD8Jx1IrCugJAlvxrFeavJxQpNGvudE2qY">
-        <GoogleMap  mapContainerStyle={containerStyle} center={coordinates} zoom={5} defaultCenter={coordinates}  onChange={()=>{}} onChildClick={()=>{}}>
-          {/* Child components, such as markers, info windows, etc. */}
-          <></>
-        </GoogleMap>
-      </LoadScript>
+    <div>
+      Map
+    </div>
+      
   
   );
 }
