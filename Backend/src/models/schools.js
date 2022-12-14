@@ -26,6 +26,11 @@ const categorySchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    // matterport string
+    matterport:[{
+      type:String,
+      trim:true
+    }],
     description: {
       type: String,
       required: true,
@@ -39,6 +44,9 @@ const categorySchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true,
+    },
+    ratings:{
+      type:String
     },
     schoolPictures: [
       {

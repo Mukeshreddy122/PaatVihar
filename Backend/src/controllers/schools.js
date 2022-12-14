@@ -12,6 +12,8 @@ exports.createSchool = (req, res, next) => {
     boardOfEduction,
     fees,
     category,
+    matterport,
+    ratings,
     createdBy,
   } = req.body;
   let schoolPictures = [];
@@ -32,6 +34,8 @@ exports.createSchool = (req, res, next) => {
     boardOfEduction,
     fees,
     category,
+    matterport,
+    ratings,
     createdBy: req.user._id,
   });
   school.save((error, school) => {
