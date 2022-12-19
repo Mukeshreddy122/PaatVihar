@@ -6,6 +6,7 @@ import axios from "axios"
 const School=()=>{
   const [currentSchoolDetails,setSchool]=useState()
   const {id} =useParams()
+  console.log(id)
   useEffect(()=>{
     axios.get(`/api/school/${id}`).then((res)=>{
       console.log(res)

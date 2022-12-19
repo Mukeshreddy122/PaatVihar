@@ -12,7 +12,6 @@ exports.createSchool = (req, res, next) => {
     boardOfEduction,
     phone,
     url,
-    rating,
     fees,
     category,
     matterport,
@@ -36,7 +35,6 @@ exports.createSchool = (req, res, next) => {
     schoolPictures,
     boardOfEduction,
     fees,
-    rating,
     category,
     matterport,
     ratings,
@@ -72,3 +70,21 @@ exports.getSchools = (req, res, next) => {
     }
   });
 };
+exports.getSchoolsById=(req,res,next)=>{
+  const{id}=req.params
+  School.findOne({_id:id}).exec((error,school)=>{
+    if(error){
+      res.status(400).json({
+        error
+      })
+    }
+    else{
+      res.status(200).json({
+        school
+      })
+    }
+  })
+ 
+}
+
+
