@@ -22,7 +22,7 @@ router.post(
   "/school/create",
   requireSignIn,
   adminMiddleware,
-  upload.array("schoolPicture"),
+  upload.array("schoolPictures"),
   createSchool
 );
 router.get("/schools", getSchools);

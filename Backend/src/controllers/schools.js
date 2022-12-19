@@ -10,6 +10,9 @@ exports.createSchool = (req, res, next) => {
     address,
     description,
     boardOfEduction,
+    phone,
+    url,
+    rating,
     fees,
     category,
     matterport,
@@ -33,9 +36,12 @@ exports.createSchool = (req, res, next) => {
     schoolPictures,
     boardOfEduction,
     fees,
+    rating,
     category,
     matterport,
     ratings,
+    phone,
+    url,
     createdBy: req.user._id,
   });
   school.save((error, school) => {

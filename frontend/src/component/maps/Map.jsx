@@ -1,53 +1,48 @@
-// import GoogleMapReact from "google-map-react";
-// import { Box } from "@chakra-ui/react";
-// import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import React, { useEffect, useState } from "react";
+import GoogleMapReact from "google-map-react";
+import { Paper, Typography } from "@mui/material";
+import useStyles from "./styles";
+function Map({  schools }) {
+  const classes = useStyles();
 
-// function Map({ coordinates, setCoordinates }) {
-//   return (
-//     <Box width={"full"} height={"full"}>
-//       <LoadScript googleMapsApiKey="AIzaSyD8Jx1IrCugJAlvxrFeavJxQpNGvudE2qY">
-//         <GoogleMap
-//           center={coordinates}
-//           zoom={10}
-//           onChange={() => {}}
-//           onChildClick={() => {}}
-//         >
-//           {/* Child components, such as markers, info windows, etc. */}
-//           <></>
-//         </GoogleMap>
-//       </LoadScript>
-//     </Box>
-//   );
-// }
-
-import React from "react";
-import GoogleMapReact from 'google-map-react'
-import { Paper,Typography,useMediaQuery } from "@mui/material";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import GradeOutlinedIcon from '@mui/icons-material/GradeOutlined';
-
-import useStyles from "./styles"
-function Map() {
-  const classes=useStyles()
-  const isMobile=useMediaQuery("(min-width:600px)")
-  const coordinates={lat:0,lng:0}
+  // const [coordinates,setcoordinates]=useState([])
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-      bootstrapURLKeys={{key:"AIzaSyD8Jx1IrCugJAlvxrFeavJxQpNGvudE2qY"}}
-      defaultCenter={coordinates}
-      center={coordinates}
-      defaultZoom={14}
-      margin={[50,50,50,50]}
-      options={''}
-      onChange={''}
-      onChildClick={''}>
-
+        bootstrapURLKeys={{ key: "AIzaSyD8Jx1IrCugJAlvxrFeavJxQpNGvudE2qY" }}
+        defaultCenter={10}
+        center={{lat: 18.1124,lng: 79.0193}}
+        defaultZoom={14}
+        options={""}
+        // onChange={(e) => {
+        //   setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+        // }}
+        // onChildClick={""}
+      >
+        {schools?.map((school, i) => (
+          <div
+            color="primary"
+            className={classes.markerContainer}
+            lat={Number(school.latitude)}
+            lng={Number(school.longitude)}
+            key={i}
+          >
+            {
+            
+                
+             
+                <Paper elevation={3} className={classes.paper}>
+                  <Typography className={classes.typography} variant="subtitle2" gutterBottom>{school.name}</Typography>
+                 <img className={classes.pointer}
+                 src="https://theindianpublicschool.org/wp-content/uploads/2021/12/cbse-tips.jpg"
+                 alt="schoolImages"/>
+                </Paper>
+             
+            }
+          </div>
+        ))}
       </GoogleMapReact>
-      
     </div>
-      
-  
   );
 }
 export default Map;

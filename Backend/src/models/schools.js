@@ -48,6 +48,12 @@ const categorySchema = new mongoose.Schema(
     ratings:{
       type:String
     },
+    phone:{
+      type:String,
+    },
+    url:{
+      type:String,
+    },
     schoolPictures: [
       {
         img: {
@@ -72,6 +78,7 @@ const categorySchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+
     updatedAt: Date,
   },
 

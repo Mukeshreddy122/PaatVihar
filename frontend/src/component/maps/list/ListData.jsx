@@ -9,14 +9,12 @@ import {
   Select,
 } from "@mui/material";
 import useStyles from "./styles.js";
-import Detail from "../details/Detail.js";
+import Detail from "../details/Detail.jsx";
 
-const ListData = () => {
+const ListData = ({schools}) => {
   const classes = useStyles();
   const [type, setType] = useState("");
   const [rating, setRating] = useState("");
-  const schools = [{ name: "Nmrec" }, { name: "CBIT" }, { name: "IITB" },{ name: "NNRG" }, { name: "SVIT" }];
-
   return (
     <div className={classes.container}>
       <Typography variant="h5" style={{ color: "black" }}>
@@ -56,6 +54,7 @@ const ListData = () => {
       <Grid container spacing={3} className={classes.list}>
         {schools?.map((school,i)=>(
           <Grid item key={i} xs={12}>
+            
             <Detail school={school}/>
           </Grid>
         ))}

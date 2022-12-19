@@ -19,7 +19,7 @@ const Cards=({school})=>{
             </SkeletonTheme>
         </div>
         :
-        <Link to={`school/${school.id}`} style={{textDecoration:"none",color:"white"}}>
+        <Link to={`school/${school._id}`} style={{textDecoration:"none",color:"white"}}>
             <div className="cards">
                 <img className="cards__img" src={Logo} alt="logo"/>
                 <div className="cards__overlay">
