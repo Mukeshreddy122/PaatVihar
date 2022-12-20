@@ -1,21 +1,3 @@
-// import React from "react"
-// import "./Header.css"
-// import Pv from "./Pv.png"
-// import {Link} from "react-router-dom"
-// const Header=()=>{
-//     return (
-//         <div className="header">
-//             <div className="headerLeft">
-//                 <Link to="/" style={{textDecoration:"none"}}><img className="header_icon" src={Pv} alt="logo-PaaVihar"/></Link>
-//                 <Link to="/schools/popular"style={{textDecoration:"none"}}><span>Popular</span></Link>
-//                 <Link to="/schools/top"style={{textDecoration:"none"}}><span>Top</span></Link>
-//                 <Link to="/schools/upcoming"style={{textDecoration:"none"}}><span>Upcoming</span></Link>
-//             </div>
-//         </div>
-//     )
-
-// }
-// export default Header
 import * as React from "react";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 import AppBar from "@mui/material/AppBar";
@@ -33,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-const pages = ["Popular", "Top", "Upcoming", "Maps"];
+const pages = ["Home", "Popular", "RoadMap", "Maps","Contact","About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -64,7 +46,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/Home"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
