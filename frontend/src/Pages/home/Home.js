@@ -12,6 +12,7 @@ const Home = () => {
     axios
       .get("/api/schools")
       .then((res) => {
+        console.log(res.data.school)
         setSchools(res.data.school);
       })
       .catch((err) => {
@@ -33,7 +34,7 @@ const Home = () => {
                 schools.map(school=>(
                     <Link style={{textDecoration:"none",color:"white"}} to={`/school/${school._id}`}>
                         <div className="posterImage">
-                            <img src={Logo}/>
+                            <img src={Logo} alt="schoolImage"/>
                         </div>
                         <div className="posterImage__overlay">
                             <div className="posterImage__title">{school?school.name:""}</div>

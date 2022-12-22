@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 
 const School=()=>{
-  const [currentSchoolDetails,setSchool]=useState()
   const {id} =useParams()
   console.log(id)
   useEffect(()=>{
