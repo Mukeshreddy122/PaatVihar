@@ -11,6 +11,7 @@ const Cards=({school})=>{
             setIsLoading(false)
         },1500)
     },[])
+    console.log(school.schoolPictures[0].img)
     return <>
     {
         isLoading?<div className="cards">

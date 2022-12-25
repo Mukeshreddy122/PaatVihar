@@ -7,7 +7,6 @@ import School from "./component/schools/School";
 // import Map from "./component/maps/Map";
 import MapData from "./component/maps/index";
 import { Contact } from "./Pages/contact/Contact";
-import{About} from "./Pages/about/About"
 function App() {
   return (
     <div className="App">
@@ -21,7 +20,7 @@ function App() {
           <Route path="/RoadMap" element={<h1>Upcoming</h1>}></Route>
           <Route path="/Popular" element={<h1><SchoolList/></h1>}></Route>
           <Route path="/Contact" element={<h1><Contact/></h1>}></Route>
-          <Route path="/About" element={<h1><About/></h1>}></Route>
+          
 
         </Routes>
       </Router>
