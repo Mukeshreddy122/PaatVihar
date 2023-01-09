@@ -1,30 +1,26 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./component/header/Header";
-import Home from "./Pages/home/Home";
-import SchoolList from "./component/schoolList/SchoolList";
-import School from "./component/schools/School";
-// import Map from "./component/maps/Map";
-import MapData from "./component/maps/index";
-import { Contact } from "./Pages/contact/Contact";
+import './App.css';
+import {BrowserRouter ,Routes,Route} from "react-router-dom"
+import Home from './pages/home/Home';
+import List from './pages/list/List';
+import SchoolProfile from './pages/schoolProfile/SchoolProfile';
+// import Exams from './pages/exams/Exams';
+import Engineering from './pages/engineering/Engineering';
+import Support from './pages/support/Support';
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" index element={<Home />}></Route>
-          <Route path="/Home" index element={<Home />}></Route>
-          <Route path="/Maps" element={<MapData />}></Route>
-          <Route path="/school/:id" element={<School />}></Route>
-          <Route path="/RoadMap" element={<h1>Upcoming</h1>}></Route>
-          <Route path="/Popular" element={<h1><SchoolList/></h1>}></Route>
-          <Route path="/Contact" element={<h1><Contact/></h1>}></Route>
-          
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/schools" element={<List/>}></Route>
+        
+        <Route path="/engineering" element={<Engineering/>}></Route>
+        <Route path="/support" element={<Support/>}></Route>
+        <Route path="/school/:id" element={<SchoolProfile/>}></Route>
 
-        </Routes>
-      </Router>
-    </div>
+
+      
+      </Routes>
+    </BrowserRouter>
   );
 }
 

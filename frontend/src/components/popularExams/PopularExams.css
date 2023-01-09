@@ -1,0 +1,36 @@
+.popular{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.fpItem{
+    flex: 1;
+    gap: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.popularImg{
+    width: 90%;
+    height: 150px;
+}
+.popularName{
+    font-weight: bold;
+}
+.popularCity{
+    font-weight: 300;
+}
+.popularRating>button{
+    background-color:#003580;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    border: none;
+}
+.popularRating>button{
+    font-size: 15px;
+}

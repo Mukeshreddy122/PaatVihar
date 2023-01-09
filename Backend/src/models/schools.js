@@ -21,16 +21,19 @@ const categorySchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    type: { type: String, required: true },
     address: {
       type: String,
       required: true,
       trim: true,
     },
     // matterport string
-    matterport:[{
-      type:String,
-      trim:true
-    }],
+    matterport: [
+      {
+        type: String,
+        trim: true,
+      },
+    ],
     description: {
       type: String,
       required: true,
@@ -45,14 +48,14 @@ const categorySchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    ratings:{
-      type:String
+    ratings: {
+      type: String,
     },
-    phone:{
-      type:String,
+    phone: {
+      type: String,
     },
-    url:{
-      type:String,
+    url: {
+      type: String,
     },
     schoolPictures: [
       {
