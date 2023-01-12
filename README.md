@@ -32,7 +32,7 @@
 ![Screenshot (72)](https://user-images.githubusercontent.com/67783264/211982063-430fae8d-4719-4464-a666-1868934640da.png)
 
 
-Introduction 😃
+# Introduction 😃
 
 Education is one of the most important aspects in human life. It is the key to a successful career and a prosperous life.
 Getting quality education matters a lot in modern world. 
@@ -46,7 +46,7 @@ When a particular school is selected, we provide all the necessary information l
 We also provide a virtual tour to help parents get a better look at the infrastructure. The main aim of this web application is to provide a one stop solution for parents /guardians to guide them in choosing the best schools for their children as per their requirements. 
 
 
-Instructions to install the web application 👀
+# Instructions to install the web application 👀
 
 *Use npm install to install all the required libraries 
 * To run the backend code use npm run cmd
